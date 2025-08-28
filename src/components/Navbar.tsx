@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Zap } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,9 +64,11 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button variant="hero" size="lg">
-                Get Quote
-              </Button>
+              <Link to="/get-quote">
+                <Button variant="hero" size="lg">
+                  Get Quote
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -96,9 +99,11 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="pt-4">
-                  <Button variant="hero" size="lg" className="w-full">
-                    Get Quote
-                  </Button>
+                  <Link to="/get-quote" className="w-full">
+                    <Button variant="hero" size="lg" className="w-full">
+                      Get Quote
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
