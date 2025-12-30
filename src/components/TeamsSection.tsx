@@ -42,18 +42,18 @@ const TeamsSection = () => {
         facebook: 'https://www.linkedin.com/in/rachel-kumwenda-kaunda-2252b0168/'
       }
     },
-    {
-      name: 'Harvey Mmangisa',
-      role: 'GIS Specialist',
-      image: teamCTO,
-      bio: 'Computer Programmer, software developer and tutor .',
-      expertise: ['Machine Learning', 'Software Development', 'Trainer'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/harvey-mmangisa-2148ba175/',
-        email: 'harveymmangisa@dronelinkmw.com',
-        twitter: '#'
-      }
-    },
+    // {
+    //   name: 'Harvey Mmangisa',
+    //   role: 'GIS Specialist',
+    //   image: teamCTO,
+    //   bio: 'Computer Programmer, software developer and tutor .',
+    //   expertise: ['Machine Learning', 'Software Development', 'Trainer'],
+    //   social: {
+    //     linkedin: 'https://www.linkedin.com/in/harvey-mmangisa-2148ba175/',
+    //     email: 'harveymmangisa@dronelinkmw.com',
+    //     twitter: '#'
+    //   }
+    // },
     {
       name: 'Edith Kalagho',
       role: 'Administrator & Land Surveyor',
@@ -85,24 +85,24 @@ const TeamsSection = () => {
       bio: 'Geospatial expert transforming aerial data into actionable insights for agriculture and conservation.',
       expertise: ['GIS Analysis', 'Remote Sensing', 'Environmental Monitoring'],
       social: {
-        linkedin: 'https://www.linkedin.com/in/harvey-mmangisa-2148ba175/',
+        linkedin: '#',
         email: 'matolamtende@dronelinkmw.com',
         twitter: '#'
       }
     },
-     {
+    {
       name: 'Aaron Amos',
       role: 'Marketing and Strategy Lead',
       image: teamMarketing,
       bio: 'Marketing specialist driving growth and brand visibility through innovative strategies.',
       expertise: ['Marketing', 'Strategy Development', 'Customer Relations'],
       social: {
-        linkedin: 'https://www.linkedin.com/in/harvey-mmangisa-2148ba175/',
+        linkedin: '#',
         email: 'matolamtende@dronelinkmw.com',
         twitter: '#'
       }
     },
-  
+
   ];
 
   const handleMemberClick = (member) => {
@@ -133,7 +133,7 @@ const TeamsSection = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our diverse team of aviation experts, technology specialists, and data scientists work together 
+            Our diverse team of aviation experts, technology specialists, and data scientists work together
             to deliver cutting-edge drone solutions that transform industries across Malawi and beyond.
           </p>
         </div>
@@ -156,7 +156,7 @@ const TeamsSection = () => {
                     className="w-full h-auto max-h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Social Links Overlay */}
                   <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <a
@@ -224,8 +224,8 @@ const TeamsSection = () => {
         {/* Modal Popup */}
         {isModalOpen && selectedMember && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-fade-in">
-            <div 
-              className="absolute inset-0 bg-foreground/10" 
+            <div
+              className="absolute inset-0 bg-foreground/10"
               onClick={closeModal}
             ></div>
             <div className="relative bg-background border-border/50 border rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10 animate-scale-in">
@@ -236,7 +236,7 @@ const TeamsSection = () => {
               >
                 <X className="w-5 h-5" />
               </button>
-              
+
               <div className="flex flex-col md:flex-row">
                 {/* Image Section */}
                 <div className="md:w-2/5">
@@ -246,7 +246,7 @@ const TeamsSection = () => {
                     className="w-full h-64 md:h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
                   />
                 </div>
-                
+
                 {/* Content Section */}
                 <div className="md:w-3/5 p-6 md:p-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -310,7 +310,7 @@ const TeamsSection = () => {
                 Join Our Growing Team
               </h3>
               <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals who share our passion for innovation 
+                We're always looking for talented individuals who share our passion for innovation
                 and excellence in drone technology. Explore career opportunities with DronelinkMW.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

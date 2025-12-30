@@ -26,11 +26,11 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/#about' },
+    { name: 'Services', href: '/#services' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   const isActive = (href: string) =>
@@ -41,11 +41,10 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50">
       <nav
-        className={`relative transition-all duration-500 ${
-          isScrolled
+        className={`relative transition-all duration-500 ${isScrolled
             ? 'bg-slate-950/70 backdrop-blur-2xl border-b border-white/10 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.6)]'
             : 'bg-transparent'
-        }`}
+          }`}
         aria-label="Main navigation"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -66,11 +65,10 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition ${
-                    isActive(item.href)
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition ${isActive(item.href)
                       ? 'text-white'
                       : 'text-white/70 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {isActive(item.href) && (
                     <span className="absolute inset-0 -z-10 rounded-lg bg-white/10 backdrop-blur-md" />
@@ -110,9 +108,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-x-0 top-16 bottom-0 bg-slate-950/80 backdrop-blur-2xl transition-transform duration-500 ${
-            isOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
+          className={`md:hidden fixed inset-x-0 top-16 bottom-0 bg-slate-950/80 backdrop-blur-2xl transition-transform duration-500 ${isOpen ? 'translate-y-0' : '-translate-y-full'
+            }`}
         >
           <div className="px-6 pt-8 space-y-2">
             {navItems.map((item, i) => (
@@ -127,7 +124,7 @@ const Navbar = () => {
               </a>
             ))}
 
-              <div className="mt-6 space-y-3">
+            <div className="mt-6 space-y-3">
               <Link to="/demo">
                 <Button variant="outline" className="w-full border-white/20 text-white">
                   Schedule Demo
