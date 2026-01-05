@@ -21,6 +21,8 @@ import StartMonitoring from "./pages/StartMonitoring";
 import StartProject from "./pages/StartProject";
 import ResearchCollaboration from "./pages/ResearchCollaboration";
 import DownloadBrochure from "./pages/DownloadBrochure";
+import EmergencyContact from "./pages/EmergencyContact";
+import Portfolio from "./pages/Portfolio";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -30,6 +32,7 @@ import TeamManagement from "./components/admin/TeamManagement";
 import BlogManagement from "./components/admin/BlogManagement";
 import Analytics from "./components/admin/Analytics";
 import Settings from "./components/admin/Settings";
+import PortfolioManagement from "./components/admin/PortfolioManagement";
 import SkipToContent from "@/components/SkipToContent";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -70,6 +73,8 @@ const App = () => (
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/services" element={<Index />} />
+        <Route path="/contact" element={<Index />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:postId" element={<BlogPostPage />} />
 
@@ -80,6 +85,7 @@ const App = () => (
           <Route path="blog" element={<BlogManagement />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="portfolio" element={<PortfolioManagement />} />
         </Route>
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

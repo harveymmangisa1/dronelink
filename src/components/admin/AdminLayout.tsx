@@ -6,7 +6,8 @@ import {
     BarChart,
     Settings,
     LogOut,
-    Home
+    Home,
+    Briefcase
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,6 +17,7 @@ export const AdminLayout = () => {
     const navItems = [
         { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
         { name: 'Blog Management', href: '/admin/blog', icon: FileText },
+        { name: 'Portfolio', href: '/admin/portfolio', icon: Briefcase },
         { name: 'Team', href: '/admin/team', icon: Users },
         { name: 'Analytics', href: '/admin/analytics', icon: BarChart },
         { name: 'Settings', href: '/admin/settings', icon: Settings },
@@ -43,8 +45,8 @@ export const AdminLayout = () => {
                             key={item.href}
                             to={item.href}
                             className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive(item.href)
-                                    ? "bg-primary/10 text-primary"
-                                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                ? "bg-primary/10 text-primary"
+                                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                                 }`}
                         >
                             <item.icon className="h-4 w-4" />

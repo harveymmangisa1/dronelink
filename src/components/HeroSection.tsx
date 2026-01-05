@@ -86,7 +86,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link to="/services" aria-label="Explore Solutions">
+            <Link to="/#services" aria-label="Explore Solutions">
               <Button className="group px-6 py-3">
                 <span className="flex items-center">
                   Explore Solutions
