@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Zap, MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Zap, MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, CheckCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,7 +9,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'About Us', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -20,11 +22,22 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Facebook, href: 'https://facebook.com/dronelinkmw', label: 'Facebook' },
+    { icon: Twitter, href: 'https://twitter.com/dronelinkmw', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/dronelinkmw', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/dronelinkmw', label: 'Instagram' },
   ];
+
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      toast.success("Subscribed to newsletter!");
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-gray-300 animate-fade-in">
@@ -40,7 +53,7 @@ const Footer = () => {
               <span className="text-2xl font-bold text-white">DronelinkMW</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading drone technology company in Malawi, specializing in aerial intelligence 
+              Leading drone technology company in Malawi, specializing in aerial intelligence
               solutions for agriculture, mapping, and environmental monitoring.
             </p>
             <div className="flex space-x-4">
@@ -48,6 +61,8 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group"
                   aria-label={social.label}
                 >
@@ -110,16 +125,26 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <div className="mt-8">
               <h4 className="font-semibold text-white mb-3">Stay Updated</h4>
-              <div className="flex space-x-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent"
-                />
-                <Button variant="accent" size="sm">
-                  Subscribe
-                </Button>
-              </div>
+              {subscribed ? (
+                <div className="flex items-center gap-2 text-green-500 animate-in fade-in slide-in-from-left-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="text-sm font-medium">Subscribed!</span>
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="flex space-x-2">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent"
+                  />
+                  <Button type="submit" variant="accent" size="sm">
+                    Subscribe
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </div>

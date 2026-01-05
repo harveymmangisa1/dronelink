@@ -15,18 +15,11 @@ import OurStory from "./pages/OurStory";
 import OpenPositions from "./pages/OpenPositions";
 import SubmitResume from "./pages/SubmitResume";
 import CaseStudies from "./pages/CaseStudies";
-import DiscussProject from "./pages/DiscussProject";
-import EmergencyContact from "./pages/EmergencyContact";
-import Portfolio from "./pages/Portfolio";
 import Demo from "./pages/Demo";
 import Consultation from "./pages/Consultation";
-import FreeConsultation from "./pages/FreeConsultation";
 import StartMonitoring from "./pages/StartMonitoring";
-import ViewResults from "./pages/ViewResults";
-import ViewReports from "./pages/ViewReports";
 import StartProject from "./pages/StartProject";
 import ResearchCollaboration from "./pages/ResearchCollaboration";
-import ScheduleAssessment from "./pages/ScheduleAssessment";
 import DownloadBrochure from "./pages/DownloadBrochure";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -61,18 +54,18 @@ const App = () => (
         <Route path="/open-positions" element={<OpenPositions />} />
         <Route path="/submit-resume" element={<SubmitResume />} />
         <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/discuss-project" element={<DiscussProject />} />
+        <Route path="/discuss-project" element={<Consultation />} />
         <Route path="/emergency-contact" element={<EmergencyContact />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/consultation" element={<Consultation />} />
-        <Route path="/free-consultation" element={<FreeConsultation />} />
+        <Route path="/free-consultation" element={<Consultation />} />
         <Route path="/start-monitoring" element={<StartMonitoring />} />
-        <Route path="/view-results" element={<ViewResults />} />
-        <Route path="/view-reports" element={<ViewReports />} />
+        <Route path="/view-results" element={<StartMonitoring />} />
+        <Route path="/view-reports" element={<StartMonitoring />} />
         <Route path="/start-project" element={<StartProject />} />
         <Route path="/research-collaboration" element={<ResearchCollaboration />} />
-        <Route path="/schedule-assessment" element={<ScheduleAssessment />} />
+        <Route path="/schedule-assessment" element={<Demo />} />
         <Route path="/download-brochure" element={<DownloadBrochure />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />

@@ -8,15 +8,13 @@ const DownloadBrochure = () => {
     const [downloaded, setDownloaded] = useState(false);
 
     const handleDownload = () => {
-        // In a real app, this would trigger a file download
         setDownloaded(true);
-        // Simulate download delay
-        setTimeout(() => {
-            const link = document.createElement('a');
-            link.href = '#'; // Would be actual PDF path
-            link.download = 'DronelinkMW-Brochure-2024.pdf';
-            // link.click(); // Commented out to prevent error in demo
-        }, 500);
+        const link = document.createElement('a');
+        link.href = '/brochure.pdf';
+        link.download = 'DronelinkMW-Brochure-2024.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (

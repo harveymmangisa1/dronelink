@@ -60,23 +60,23 @@ const GetQuote = () => {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div className="space-y-2">
                                                 <label className="text-sm font-medium text-foreground">First Name</label>
-                                                <Input placeholder="John" required className="bg-background/50" />
+                                                <Input name="firstName" placeholder="John" required className="bg-background/50 focus:ring-accent" />
                                             </div>
                                             <div className="space-y-2">
                                                 <label className="text-sm font-medium text-foreground">Last Name</label>
-                                                <Input placeholder="Doe" required className="bg-background/50" />
+                                                <Input name="lastName" placeholder="Doe" required className="bg-background/50 focus:ring-accent" />
                                             </div>
                                         </div>
 
                                         <div className="space-y-2">
                                             <label className="text-sm font-medium text-foreground">Email Address</label>
-                                            <Input type="email" placeholder="john@company.com" required className="bg-background/50" />
+                                            <Input name="email" type="email" placeholder="john@company.com" required className="bg-background/50 focus:ring-accent" />
                                         </div>
 
                                         <div className="space-y-2">
                                             <label className="text-sm font-medium text-foreground">Service Type</label>
-                                            <Select>
-                                                <SelectTrigger className="bg-background/50">
+                                            <Select name="service" required>
+                                                <SelectTrigger className="bg-background/50 focus:ring-accent">
                                                     <SelectValue placeholder="Select a service" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -92,13 +92,14 @@ const GetQuote = () => {
                                         <div className="space-y-2">
                                             <label className="text-sm font-medium text-foreground">Project Details</label>
                                             <Textarea
+                                                name="details"
                                                 placeholder="Please describe your project location, scope, and specific requirements..."
-                                                className="bg-background/50 min-h-[120px]"
+                                                className="bg-background/50 min-h-[120px] focus:ring-accent"
                                                 required
                                             />
                                         </div>
 
-                                        <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+                                        <Button type="submit" size="lg" className="w-full bg-tech-gradient hover:opacity-90 transition-opacity">
                                             Submit Request <Send className="ml-2 w-4 h-4" />
                                         </Button>
                                     </form>

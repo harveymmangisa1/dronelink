@@ -51,13 +51,13 @@ const Demo = () => {
                                 </div>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div className="grid grid-cols-2 gap-4">
-                                        <Input placeholder="First Name" required className="bg-background/50" />
-                                        <Input placeholder="Last Name" required className="bg-background/50" />
+                                        <Input name="firstName" placeholder="First Name" required className="bg-background/50 focus:ring-accent" />
+                                        <Input name="lastName" placeholder="Last Name" required className="bg-background/50 focus:ring-accent" />
                                     </div>
-                                    <Input type="email" placeholder="Work Email" required className="bg-background/50" />
-                                    <Input placeholder="Company Name" className="bg-background/50" />
-                                    <Select>
-                                        <SelectTrigger className="bg-background/50">
+                                    <Input name="email" type="email" placeholder="Work Email" required className="bg-background/50 focus:ring-accent" />
+                                    <Input name="company" placeholder="Company Name" className="bg-background/50 focus:ring-accent" />
+                                    <Select name="industry">
+                                        <SelectTrigger className="bg-background/50 focus:ring-accent">
                                             <SelectValue placeholder="Industry Interests" />
                                         </SelectTrigger>
                                         <SelectContent>
@@ -67,7 +67,7 @@ const Demo = () => {
                                             <SelectItem value="gov">Government</SelectItem>
                                         </SelectContent>
                                     </Select>
-                                    <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">
+                                    <Button type="submit" size="lg" className="w-full bg-tech-gradient hover:opacity-90 transition-opacity">
                                         Book Demo <PlayCircle className="ml-2 w-4 h-4" />
                                     </Button>
                                 </form>
