@@ -1,3 +1,7 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
-const ScheduleAssessment = () => <PlaceholderPage title="Schedule Assessment" />;
+import Demo from './Demo';
+
+const ScheduleAssessment = () => {
+    return <Demo />;
+};
+
 export default ScheduleAssessment;

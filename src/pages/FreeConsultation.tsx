@@ -1,3 +1,7 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
-const FreeConsultation = () => <PlaceholderPage title="Free Consultation" />;
+import Consultation from './Consultation';
+
+const FreeConsultation = () => {
+    return <Consultation />;
+};
+
 export default FreeConsultation;

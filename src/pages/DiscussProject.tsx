@@ -1,3 +1,7 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
-const DiscussProject = () => <PlaceholderPage title="Discuss Your Project" />;
+import Consultation from './Consultation';
+
+const DiscussProject = () => {
+    return <Consultation />;
+};
+
 export default DiscussProject;

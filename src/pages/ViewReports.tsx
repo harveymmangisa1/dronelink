@@ -1,3 +1,7 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
-const ViewReports = () => <PlaceholderPage title="View Reports" />;
+import StartMonitoring from './StartMonitoring';
+
+const ViewReports = () => {
+    return <StartMonitoring />;
+};
+
 export default ViewReports;
